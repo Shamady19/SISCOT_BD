@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C499FD36-BB9C-4E5E-8F5C-627809BBAAB6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PROYECTO_INTEGRADOR</RootNamespace>
+    <AssemblyName>PROYECTO_INTEGRADOR</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BO\CORTE_CAJA_BO.cs" />
+    <Compile Include="BO\PERSONA_BO.cs" />
+    <Compile Include="BO\SERVICIO_BO.cs" />
+    <Compile Include="BO\TAMAÑO_BO.cs" />
+    <Compile Include="BO\TARJETA_BO.cs" />
+    <Compile Include="BO\TIPO_BO.cs" />
+    <Compile Include="BO\TIPO_USUARIO_BO.cs" />
+    <Compile Include="BO\USUARIO_BO.cs" />
+    <Compile Include="BO\VENTA_BO.cs" />
+    <Compile Include="DAO\CONEXION_DAO.cs" />
+    <Compile Include="DAO\PERSONA_DAO.cs" />
+    <Compile Include="DAO\USUARIO_DAO.cs" />
+    <Compile Include="GUI\BAJAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BAJAS.Designer.cs">
+      <DependentUpon>BAJAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\COBRAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\COBRAR.Designer.cs">
+      <DependentUpon>COBRAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CONSULTAR SALDO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CONSULTAR SALDO.Designer.cs">
+      <DependentUpon>CONSULTAR SALDO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\INICIO_DE_SECION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\INICIO_DE_SECION.Designer.cs">
+      <DependentUpon>INICIO_DE_SECION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RECARGAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RECARGAS.Designer.cs">
+      <DependentUpon>RECARGAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MENU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MENU.Designer.cs">
+      <DependentUpon>MENU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\REGISTRO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\REGISTRO.designer.cs">
+      <DependentUpon>REGISTRO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\BAJAS.resx">
+      <DependentUpon>BAJAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\COBRAR.resx">
+      <DependentUpon>COBRAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CONSULTAR SALDO.resx">
+      <DependentUpon>CONSULTAR SALDO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\INICIO_DE_SECION.resx">
+      <DependentUpon>INICIO_DE_SECION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MENU.resx">
+      <DependentUpon>MENU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RECARGAS.resx">
+      <DependentUpon>RECARGAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\REGISTRO.resx">
+      <DependentUpon>REGISTRO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\cobrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busqueda-de-datos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechabaja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recarga.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
